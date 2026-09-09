@@ -22761,3 +22761,485 @@ body {
     height: 360px;
   }
 }
+
+/* =========================================================
+   FIX HEADER / THANH CÔNG CỤ CLOTHSTORE
+   ========================================================= */
+
+.modern-header {
+  position: sticky;
+  top: 0;
+  z-index: 500;
+
+  width: 100%;
+  min-height: 76px;
+
+  display: grid !important;
+  grid-template-columns: auto minmax(0, 1fr) auto;
+  align-items: center;
+
+  gap: 16px;
+
+  padding: 0 24px !important;
+
+  background: rgba(255, 255, 255, 0.98);
+  border-bottom: 1px solid #e5e7eb;
+
+  box-shadow: 0 6px 22px rgba(15, 23, 42, 0.05);
+  backdrop-filter: blur(14px);
+}
+
+/* ================= LOGO ================= */
+
+.modern-logo {
+  display: flex;
+  align-items: center;
+
+  flex-shrink: 0;
+  min-width: 205px;
+
+  gap: 10px;
+}
+
+.logo-mark {
+  width: 44px;
+  height: 44px;
+
+  display: grid;
+  place-items: center;
+
+  flex-shrink: 0;
+
+  border-radius: 12px;
+
+  background: #f1f5f9;
+
+  font-size: 24px;
+}
+
+.logo-copy {
+  min-width: 0;
+}
+
+.logo-copy strong {
+  display: block;
+
+  color: #0f172a;
+
+  font-size: 20px;
+  font-weight: 900;
+
+  line-height: 1.05;
+
+  white-space: nowrap;
+}
+
+.logo-copy small {
+  display: block;
+
+  margin-top: 5px;
+
+  color: #94a3b8;
+
+  font-size: 8px;
+  font-weight: 900;
+
+  letter-spacing: 0.14em;
+
+  white-space: nowrap;
+}
+
+/* ================= MENU ================= */
+
+.modern-nav {
+  width: 100%;
+
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+
+  gap: 2px;
+
+  min-width: 0;
+}
+
+.modern-nav a {
+  position: relative;
+
+  min-height: 76px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 0 10px;
+
+  color: #334155;
+
+  font-size: 11px;
+  font-weight: 800;
+
+  text-decoration: none;
+
+  white-space: nowrap;
+
+  transition:
+    color 0.2s ease,
+    background 0.2s ease;
+}
+
+.modern-nav a:hover {
+  color: #0f1f38;
+}
+
+.modern-nav .active-link {
+  color: #0f1f38;
+}
+
+.modern-nav .active-link::after {
+  content: "";
+
+  position: absolute;
+
+  left: 10px;
+  right: 10px;
+  bottom: 0;
+
+  height: 3px;
+
+  border-radius: 99px 99px 0 0;
+
+  background: #0f1f38;
+}
+
+/* ================= ACTION ================= */
+
+.modern-header-actions {
+  display: flex !important;
+  align-items: center;
+  justify-content: flex-end;
+
+  flex-shrink: 0;
+
+  gap: 6px;
+
+  min-width: max-content;
+}
+
+/* Search */
+
+.modern-icon-button {
+  width: 40px !important;
+  height: 40px !important;
+
+  min-width: 40px;
+
+  display: grid;
+  place-items: center;
+
+  padding: 0 !important;
+
+  border: 1px solid #e2e8f0;
+
+  border-radius: 12px;
+
+  background: #ffffff;
+
+  font-size: 18px;
+
+  cursor: pointer;
+}
+
+/* Account */
+
+.modern-account-button {
+  height: 40px !important;
+
+  display: flex !important;
+  align-items: center;
+
+  gap: 6px;
+
+  padding: 0 10px !important;
+
+  border: 0;
+
+  border-radius: 12px;
+
+  background: #f8fafc;
+
+  cursor: pointer;
+}
+
+.modern-account-copy {
+  display: block;
+
+  max-width: 86px;
+
+  overflow: hidden;
+
+  color: #0f172a;
+
+  font-size: 10px;
+  font-weight: 800;
+
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* Admin */
+
+.modern-admin-button {
+  height: 40px !important;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 0 11px !important;
+
+  border: 0;
+
+  border-radius: 12px;
+
+  background: #eef2ff;
+
+  color: #3730a3;
+
+  font-size: 10px !important;
+  font-weight: 800;
+
+  white-space: nowrap;
+
+  cursor: pointer;
+}
+
+/* Cart */
+
+.modern-cart-button {
+  position: relative;
+
+  height: 40px !important;
+
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+
+  gap: 5px;
+
+  padding: 0 12px !important;
+
+  border: 0;
+
+  border-radius: 12px;
+
+  background: #0f1f38;
+
+  color: #ffffff;
+
+  font-size: 10px !important;
+  font-weight: 800;
+
+  white-space: nowrap;
+
+  cursor: pointer;
+}
+
+.modern-cart-button .cart-count {
+  position: absolute;
+
+  top: -6px;
+  right: -6px;
+
+  min-width: 19px;
+  height: 19px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 0 5px;
+
+  border: 2px solid #ffffff;
+
+  border-radius: 999px;
+
+  background: #ef4444;
+
+  color: white;
+
+  font-size: 9px;
+  font-weight: 900;
+}
+
+/* =========================================================
+   LAPTOP NHỎ
+   ========================================================= */
+
+@media (max-width: 1300px) {
+
+  .modern-header {
+    gap: 10px;
+
+    padding-left: 18px !important;
+    padding-right: 18px !important;
+  }
+
+  .modern-logo {
+    min-width: 180px;
+  }
+
+  .logo-copy strong {
+    font-size: 18px;
+  }
+
+  .modern-nav a {
+    padding-left: 7px;
+    padding-right: 7px;
+
+    font-size: 10px;
+  }
+
+  .modern-account-copy {
+    display: none !important;
+  }
+
+  .modern-admin-button {
+    padding-left: 9px !important;
+    padding-right: 9px !important;
+  }
+
+  .modern-cart-button {
+    padding-left: 10px !important;
+    padding-right: 10px !important;
+  }
+}
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 1050px) {
+
+  .modern-header {
+    display: flex !important;
+    flex-wrap: wrap;
+
+    min-height: auto;
+
+    padding-top: 9px !important;
+    padding-bottom: 9px !important;
+  }
+
+  .modern-logo {
+    min-width: auto;
+  }
+
+  .modern-header-actions {
+    margin-left: auto;
+  }
+
+  .modern-nav {
+    order: 3;
+
+    width: 100%;
+
+    justify-content: flex-start;
+
+    overflow-x: auto;
+
+    scrollbar-width: none;
+
+    border-top: 1px solid #f1f5f9;
+  }
+
+  .modern-nav::-webkit-scrollbar {
+    display: none;
+  }
+
+  .modern-nav a {
+    min-height: 44px;
+
+    padding: 0 12px;
+
+    flex: 0 0 auto;
+  }
+
+  .modern-nav .active-link::after {
+    bottom: 0;
+  }
+}
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 720px) {
+
+  .modern-header {
+    padding-left: 12px !important;
+    padding-right: 12px !important;
+  }
+
+  .logo-copy small {
+    display: none;
+  }
+
+  .logo-copy strong {
+    font-size: 17px;
+  }
+
+  .logo-mark {
+    width: 40px;
+    height: 40px;
+
+    font-size: 21px;
+  }
+
+  .modern-icon-button {
+    width: 38px !important;
+    height: 38px !important;
+
+    min-width: 38px;
+  }
+
+  .modern-account-button {
+    width: 38px;
+    height: 38px !important;
+
+    padding: 0 !important;
+
+    justify-content: center;
+  }
+
+  .modern-account-copy {
+    display: none !important;
+  }
+
+  .modern-admin-button {
+    height: 38px !important;
+
+    padding: 0 8px !important;
+
+    font-size: 0 !important;
+  }
+
+  .modern-admin-button::first-letter {
+    font-size: 16px;
+  }
+
+  .modern-cart-button {
+    width: 38px;
+    height: 38px !important;
+
+    padding: 0 !important;
+  }
+
+  .modern-cart-button > span:not(.cart-count) {
+    display: none;
+  }
+
+  .modern-nav a {
+    font-size: 10px;
+  }
+}
