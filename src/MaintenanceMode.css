@@ -1,0 +1,247 @@
+* {
+  box-sizing: border-box;
+}
+
+.maintenance-page {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  padding: 28px;
+  background:
+    radial-gradient(circle at 15% 15%, rgba(99, 102, 241, 0.12), transparent 34%),
+    radial-gradient(circle at 85% 85%, rgba(249, 115, 22, 0.12), transparent 30%),
+    #f8fafc;
+  color: #111827;
+  font-family: Inter, Arial, Helvetica, sans-serif;
+}
+
+.maintenance-shell {
+  width: min(680px, 100%);
+  padding: 42px;
+  border: 1px solid #e5e7eb;
+  border-radius: 26px;
+  background: rgba(255, 255, 255, 0.96);
+  box-shadow: 0 30px 90px rgba(15, 23, 42, 0.12);
+  text-align: center;
+}
+
+.maintenance-brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 34px;
+}
+
+.maintenance-brand > span {
+  width: 48px;
+  height: 48px;
+  display: grid;
+  place-items: center;
+  border-radius: 14px;
+  background: #eef2ff;
+  font-size: 25px;
+}
+
+.maintenance-brand div {
+  text-align: left;
+}
+
+.maintenance-brand strong,
+.maintenance-brand small {
+  display: block;
+}
+
+.maintenance-brand strong {
+  font-size: 18px;
+}
+
+.maintenance-brand small {
+  margin-top: 2px;
+  color: #6b7280;
+  font-size: 11px;
+}
+
+.maintenance-icon {
+  width: 96px;
+  height: 96px;
+  display: grid;
+  place-items: center;
+  margin: 0 auto 18px;
+  border-radius: 50%;
+  background: #eef2ff;
+  font-size: 48px;
+}
+
+.maintenance-badge {
+  display: inline-flex;
+  padding: 7px 11px;
+  border-radius: 999px;
+  background: #fff7ed;
+  color: #c2410c;
+  font-size: 10px;
+  font-weight: 900;
+  letter-spacing: 0.12em;
+}
+
+.maintenance-shell h1 {
+  margin: 16px 0 10px;
+  font-size: clamp(30px, 5vw, 46px);
+  line-height: 1.1;
+}
+
+.maintenance-message {
+  max-width: 540px;
+  margin: 0 auto;
+  color: #667085;
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+.maintenance-time {
+  max-width: 470px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 24px auto 0;
+  padding: 14px 16px;
+  border-radius: 14px;
+  background: #eff6ff;
+  text-align: left;
+}
+
+.maintenance-time > span {
+  font-size: 24px;
+}
+
+.maintenance-time small,
+.maintenance-time strong {
+  display: block;
+}
+
+.maintenance-time small {
+  color: #64748b;
+  font-size: 10px;
+}
+
+.maintenance-time strong {
+  margin-top: 4px;
+  color: #1e3a8a;
+  font-size: 13px;
+}
+
+.maintenance-actions {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 26px;
+}
+
+.maintenance-actions button,
+.maintenance-login button {
+  min-height: 44px;
+  border: 0;
+  border-radius: 11px;
+  padding: 0 16px;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.maintenance-refresh {
+  background: #111827;
+  color: #fff;
+}
+
+.maintenance-admin-button {
+  background: #eef2ff;
+  color: #3730a3;
+}
+
+.maintenance-login {
+  max-width: 470px;
+  margin: 18px auto 0;
+  padding: 18px;
+  border: 1px solid #e5e7eb;
+  border-radius: 16px;
+  background: #f8fafc;
+  text-align: left;
+}
+
+.maintenance-login > div {
+  margin-bottom: 12px;
+}
+
+.maintenance-login > div strong,
+.maintenance-login > div span {
+  display: block;
+}
+
+.maintenance-login > div strong {
+  font-size: 14px;
+}
+
+.maintenance-login > div span {
+  margin-top: 4px;
+  color: #667085;
+  font-size: 10px;
+  line-height: 1.5;
+}
+
+.maintenance-login input {
+  width: 100%;
+  height: 43px;
+  margin-top: 9px;
+  border: 1px solid #d0d5dd;
+  border-radius: 10px;
+  padding: 0 12px;
+  outline: none;
+  background: #fff;
+}
+
+.maintenance-login input:focus {
+  border-color: #6366f1;
+  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.1);
+}
+
+.maintenance-login button {
+  width: 100%;
+  margin-top: 12px;
+  background: #4f46e5;
+  color: #fff;
+}
+
+.maintenance-login button:disabled {
+  opacity: 0.6;
+  cursor: wait;
+}
+
+.maintenance-login-error {
+  margin: 10px 0 0;
+  color: #b42318;
+  font-size: 11px;
+  line-height: 1.5;
+}
+
+.maintenance-shell footer {
+  margin-top: 30px;
+  color: #98a2b3;
+  font-size: 10px;
+}
+
+@media (max-width: 560px) {
+  .maintenance-page {
+    padding: 14px;
+  }
+
+  .maintenance-shell {
+    padding: 28px 18px;
+    border-radius: 20px;
+  }
+
+  .maintenance-actions {
+    flex-direction: column;
+  }
+
+  .maintenance-actions button {
+    width: 100%;
+  }
+}
